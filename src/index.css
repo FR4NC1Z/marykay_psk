@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FDF8F6;
+    color: #301820;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom delicate glassmorphism and animations */
+.glass-card {
+  background: rgba(255, 251, 249, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(232, 198, 201, 0.45);
+}
+
+.glass-nav {
+  background: rgba(253, 248, 246, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(232, 198, 201, 0.4);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #7D3149 0%, #D4A7B8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #9B4A65 0%, #B88358 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Smooth pulse for CTA glow */
+@keyframes delicatePulse {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(212, 167, 184, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 0 14px rgba(212, 167, 184, 0);
+  }
+}
+
+.pulse-glow {
+  animation: delicatePulse 2.5s infinite;
+}
